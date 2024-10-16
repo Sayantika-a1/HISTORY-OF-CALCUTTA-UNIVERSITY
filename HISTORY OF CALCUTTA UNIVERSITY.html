@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    
+    <!-- Import Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- CSS Styles -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        
+        nav {
+            position: fixed;
+            top: 0;
+            height: 50px;
+            line-height: 50px;
+            width: 100%;
+            background-color: #F5F5DC;
+             z-index: 1000; 
+        }
+
+        nav ul {
+            list-style: none; 
+            height: 250px;
+            margin: 0px auto;
+            text-align: center;
+            padding: 0px;
+            position: relative;
+        }
+
+        nav li {
+            display: inline-block; 
+            margin: 0 30px;
+            padding: 0 30px;
+            cursor: pointer;
+            transition: all 0.5s;
+            position: relative;
+        }
+
+        nav li:hover {
+            background-color: rgb(237, 199, 199); 
+        }
+
+        nav a {
+            text-decoration: none; 
+            color: rgb(110, 38, 14);
+            font-family: sans-serif;
+            font-size: 14px;
+            transition: all 0.5s;
+            transform: translateY(0px);
+            display: block;
+        }
+
+        nav li:hover a {
+            color: black;
+            transform: translateY(5px);
+        }
+
+        
+        nav .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #F5F5DC;
+            padding: 0px;
+            list-style: none;
+            width: 200px;
+            box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        nav .dropdown li {
+            padding: 10px 10px;
+            text-align: left;
+        }
+
+        nav .dropdown li a {
+            color: orange;
+            padding: 5px 2px;
+            display: block;
+        }
+
+        nav .dropdown li a:hover {
+            background-color: #f2f2c7;
+            color: black;
+        }
+
+       
+       nav li:hover .dropdown {
+            display: block;
+        }
+
+       
+        header {
+            width: 100%;
+            height: 100vh;
+            background: radial-gradient(rgba(41, 41, 41, 0.4), rgba(0, 0, 0, 0.5)), url('https://www.univariety.com/blog/wp-content/uploads/2015/11/University-of-Calcutta.jpg');
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+        }
+
+        .main_title {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+            color: rgb(255,255,255);
+            padding: 30px;
+        }
+
+        .main_title h1 {
+            font-size: 150px;
+            font-color: white;
+            margin: 30px auto;
+            font-family: 'Kaushan Script', sans-serif;
+            margin-top: 50px;
+            font-weight: lighter;
+        }
+
+        .main_title p {
+            font-family: 'Poppins', sans-serif;
+            font-size: 40px;
+             font-color: white;
+            margin-bottom: 25px;
+            letter-spacing: 2px;
+            font-weight: 200;
+        }
+
+        .main_title a {
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+            margin: 20px auto;
+            color: Gold;
+            background-color: rgb(128, 70, 27);
+            padding: 10px 30px;
+            height: 50px;
+            border: 4px solid maroon;
+            cursor: pointer;
+            transition: all 1.0s;
+            border-radius: 5px;
+            display: block;
+            position: relative;
+            transform: translateY(0px);
+        }
+
+        .main_title a:hover {
+            background-color: black;
+            color: white;
+            box-shadow: 0px 0px 5px 2px rgba(246, 170, 170, 0.8), 0px 22px 20px -18px rgb(246, 170, 170);
+            transform: translateY(10px);
+        }
+
+        
+        #about {
+            width: 100%;
+            height: 80vh;
+            width: 100%;
+            height: 100vh;
+            background: radial-gradient(rgba(41, 41, 41, 0.4), rgba(0, 0, 0, 0.5)), url('https://static3.depositphotos.com/1004364/205/i/450/depositphotos_2052861-stock-photo-old-paper.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: bottom;
+            display: flex;
+        }
+
+        #about .left {
+            width: 60%;
+            height: 100%;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Nerko One', sans-serif;
+        }
+
+        #about .left h1 {
+            font-size: 40px;
+            margin-top: 50px;
+            margin-bottom: 10px;
+            font-weight: 400;
+            color: SaddleBrown;
+    box-shadow: 5px 5px 5px 5px ;
+     background-color: coral;
+  
+        }
+
+     
+
+        #about .left h3 {
+            margin: 5px auto;
+            font-family: 'Cambria', sans-serif;
+            font-size: 25px;
+            font-weight: 300;
+            color: #ffe4e1;
+        }
+
+        #about .left p {
+            line-height: 30px;
+            font-family:'Nunito', sans-serif;
+            font-size: 20px;
+            width: 85%;
+            color: #f3f0e8;
+            text-align: justify;
+        }
+         #about .left h4 {
+            margin: 5px auto;
+            font-family: 'Cambria', sans-serif;
+            font-size: 25px;
+            font-weight: 300;
+            color: #ffe4e1;
+        }
+        #about .left p {
+            line-height: 30px;
+            font-family:'Nunito', sans-serif;
+            font-size: 20px;
+            width: 85%;
+            color: #f3f0e8;
+            text-align: justify;
+        }
+        
+      #about .right  
+      {
+            width: 40%;
+            height: 100%;
+        }
+
+        #about .right img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: centre;
+        }
+
+       
+        .about-img {
+            width: 90%; 
+            height: 85%;
+            box-shadow: 0 0 15px 15px rgba(0, 0, 0.5, 0.5); 
+            border-radius: 25px; 
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <ul>
+            <li><b><a href="#home">Home</a></b></li>
+             <li><b><a href="#Address">Address</a>
+
+              <ul class="dropdown">
+              <li><a href="#recent-a">87/1,College St,College Square,Kolkata-73</a></li>
+          </b></li>
+            </ul>           
+              <li><b>
+                <a href="#articles">Articles</a>
+                <ul class="dropdown">
+                    <li><a href="#recent-articles">Recent Articles</a></li>
+                    <li><a href="#popular-articles">Popular Articles</a></li>
+                     <li><a href="#By students">By Students</a></li>
+                </ul>
+            </b></li>
+            <li><b>
+                <a href="#notable-alumni">Notable Alumni</a>
+                <ul class="dropdown">
+                    <li><a href="#C.V.-Raman">C.V. Raman</a></li>
+                    <li><a href="#Amartya-Sen">Amartya Sen</a></li>
+                     <li><a href="#Mircea Eliade">Mircea Eliade</a></li>
+                </ul>
+            </b></li>
+            <li><b>
+                <a href="#know-more">Know More</a>
+                <ul class="dropdown">
+                    <li><a href="#history">Achievments</a></li>
+                    <li><a href="#mission">Mission</a></li>
+                     <li><a href="#Festival">Festivals</a></li>
+                </ul>
+            </b></li>
+        </ul>
+    </nav>
+
+    <!-- Header Section -->
+    <header>
+        <div class="main_title">
+            <h1>Calcutta University</h1>            
+            <p><b>Unveiling A Journey Through Time</b></p>
+            <a href="#about">Step into history</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="left">
+            <div class="floating-box">
+                <h1><b>Looking Back To The Glorious Past</b></h1>
+            </div>
+            <h3><b>The Bygone Days</b></h3>
+            <p><span style="font-size: 15px">The University of Calcutta (CU) was founded on January 24, 1857, in pursuance of a dispatch from the Court of Directors of the East India Company to the Governor-General of India in Council in 1854. The dispatch suggested the establishment of universities in Calcutta, Bombay, and Madras. CU is the oldest multidisciplinary university in the Indian subcontinent and Southeast Asia, and is considered the first Western-style institution of its kind in Asia. It is accredited as an "A" grade university by the National Assessment and Accreditation Council (NAAC).<br> 
+<h4><b>On the whole</b></h4>
+<p><span style="font-size: 15px">Its alumni and faculty include several heads of state and government, social reformers, prominent artists, the only Indian Dirac Medal winner, many Fellows of the Royal Society and six Nobel laureates who are Ronald Ross, Rabindranath Tagore, C. V. Raman, Amartya Sen, and Abhijit Banerjee.The university has the highest number of students who have cleared the National Eligibility Test. The University of Calcutta is a member of the United Nations Academic Impact. <span style="font-size: 14px"><BR><b><i>-By Sayantika Das </i></b></span></P>
+</div>
+        <div class="right">
+            <img src="https://www.getbengal.com/uploads/story_image/Calcutta-University.jpg" alt="Main Entrance" class="about-img">
+        </div>
+    </section>
+
+</body>
+</html>
